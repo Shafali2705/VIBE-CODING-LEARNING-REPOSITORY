@@ -12,28 +12,32 @@
   --bg-overlay: rgba(255, 255, 255, 0.95); /* Header overlay with blur */
   
   /* Text - Exact Colors */
-  --text-primary: #232323;               /* Main headings and content */
-  --text-secondary: #353535;             /* Supporting text */
-  --text-muted: #666666;                 /* Captions, meta text - adjusted for contrast */
+  --text-primary: #3E2723;               /* Deep Brown for primary text (was black #232323) */
+  --text-secondary: #5D4037;             /* Lighter Brown for secondary */
+  --text-muted: #8D6E63;                 /* Muted Brown */
   
+  /* Brand Colors */
+  --brand-brown: #5D4037;                /* Primary CTA Brown */
+  --brand-brown-hover: #3E2723;          /* Darker Brown for Hover */
+
   /* Borders - Exact Colors */
-  --border-primary: #999999;             /* Standard borders */
-  --border-input: #999999;               /* Form input borders */
-  --border-input-focus: #4D4D4D;         /* Focused input borders */
-  --border-light: rgba(153, 153, 153, 0.3); /* Subtle dividers */
+  --border-primary: #A1887F;             /* Warm Brown Border */
+  --border-input: #D7CCC8;               /* Form input borders */
+  --border-input-focus: #5D4037;         /* Focused input borders */
+  --border-light: rgba(161, 136, 127, 0.3); /* Subtle dividers */
 
   /* Glass Effect Colors */
-  --glass-bg: rgba(255, 255, 255, 0.2);      /* Glass morphism background */
-  --glass-border: rgba(255, 255, 255, 0.3);  /* Glass morphism border */
+  --glass-bg: rgba(255, 255, 255, 0.4);      
+  --glass-border: rgba(255, 255, 255, 0.5);  
   
   /* Gradients */
   --gradient-hero-warm: linear-gradient( 
     180deg,
-    rgba(252, 202, 199, 0.2) 0%,     /* Main peach background */
-    rgba(253, 215, 197, 0.3) 25%,  /* Subtle peach tint */
-    rgba(254, 241, 229, 0.4) 50%,  /* Light cream warmth */
-    rgba(255, 250, 243, 0.6) 75%,  /* Gentle cream warmth */
-    #FFF9F2 100%                   /* Blend into page bg */
+    rgba(252, 202, 199, 0.2) 0%,     
+    rgba(253, 215, 197, 0.3) 25%,  
+    rgba(254, 241, 229, 0.4) 50%,  
+    rgba(255, 250, 243, 0.6) 75%,  
+    #FFF9F2 100%                   
   );
 
   --radius: 0.5rem;
@@ -78,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Button Components */
 .btn-primary {
-  background: var(--text-primary);
+  background: var(--brand-brown);
   color: white;
   border: none;
   border-radius: 2rem;
@@ -97,15 +101,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  background: var(--text-secondary);
+  background: var(--brand-brown-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(93, 64, 55, 0.2);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.5);
-  color: var(--text-primary);
-  border: 1px solid var(--text-primary);
+  color: var(--brand-brown);
+  border: 1px solid var(--brand-brown);
   border-radius: 2rem;
   padding: 0.75rem 2rem;
   font-family: 'Inter', sans-serif;
@@ -119,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-  background: var(--text-primary);
+  background: var(--brand-brown);
   color: white;
   transform: translateY(-2px);
 }

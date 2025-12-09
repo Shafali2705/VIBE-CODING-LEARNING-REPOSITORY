@@ -1,11 +1,10 @@
 import React from 'react';
 import { ArrowRight, Key, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
-import BuyHomeModal from './BuyHomeModal';
 
 export default function Hero() {
-  const scrollToRentals = () => {
-    const element = document.getElementById('rentals');
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -16,7 +15,7 @@ export default function Hero() {
       {/* Background with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(255,249,242,0.85)] to-[#FFF9F2] z-10"></div>
-        {/* Updated to Family Image */}
+        {/* Family Image */}
         <img 
           src="https://images.unsplash.com/photo-1585945148306-db646373834d?q=80&w=2070&auto=format&fit=crop" 
           alt="Happy Indian Family in Living Room" 
@@ -43,14 +42,14 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="heading-hero"
           >
-            Find Your <span className="text-neutral-500 italic font-serif">Safe Haven</span> <br/>in Koregaon Park
+            Find Your <span className="text-[#8D6E63] italic font-serif">Safe Haven</span> <br/>in Koregaon Park
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-neutral-600 max-w-xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-[#5D4037] max-w-xl mx-auto leading-relaxed"
           >
             Curated premium homes for working women and families. 
             Safety, comfort, and community — personally verified.
@@ -63,17 +62,18 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
             <button 
-              onClick={scrollToRentals}
+              onClick={() => scrollToSection('rentals')}
               className="btn-primary h-14 px-8 text-lg w-full sm:w-auto shadow-xl shadow-orange-100"
             >
               Explore Rentals <Key size={20} />
             </button>
             
-            <BuyHomeModal>
-              <button className="btn-secondary h-14 px-8 text-lg w-full sm:w-auto bg-white/60">
-                Buy Homes <Home size={20} className="ml-2" />
-              </button>
-            </BuyHomeModal>
+            <button 
+              onClick={() => scrollToSection('contact-section')}
+              className="btn-secondary h-14 px-8 text-lg w-full sm:w-auto bg-white/60"
+            >
+              Buy Homes <Home size={20} className="ml-2" />
+            </button>
 
           </motion.div>
         </div>

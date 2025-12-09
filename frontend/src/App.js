@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
+import ContactSection from './components/ContactSection';
 import Rentals from './components/Rentals';
 import Testimonials from './components/Testimonials';
 import About from './components/About';
@@ -10,13 +10,13 @@ import { Toaster } from './components/ui/sonner';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] font-sans selection:bg-neutral-200">
+    <div className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] font-sans selection:bg-[#D7CCC8] selection:text-[#3E2723]">
       <Navbar />
       <main>
         <Hero />
         <Rentals />
         <Testimonials />
-        <Features />
+        <ContactSection />
         <About />
       </main>
       <Footer />

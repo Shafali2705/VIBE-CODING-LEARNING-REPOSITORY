@@ -1,5 +1,5 @@
 import React from 'react';
-import { Quote } from 'lucide-react';
+import { Quote, Phone, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const testimonials = [
@@ -25,24 +25,34 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 px-4 bg-[#FFF9F2] overflow-hidden">
+    <section className="py-24 px-4 bg-white overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         
         <div className="flex flex-col md:flex-row gap-12 items-start">
           
           {/* Header Area */}
           <div className="md:w-1/3 space-y-6 sticky top-24">
-            <div className="inline-flex items-center gap-2 text-neutral-400 uppercase tracking-widest text-xs font-medium">
-              <span className="w-8 h-px bg-neutral-400"></span>
+            <div className="inline-flex items-center gap-2 text-[#8D6E63] uppercase tracking-widest text-xs font-medium">
+              <span className="w-8 h-px bg-[#8D6E63]"></span>
               Stories
             </div>
             <h2 className="heading-2">Trusted by 500+ Happy Families</h2>
-            <p className="text-neutral-500 leading-relaxed">
+            <p className="text-[#5D4037] leading-relaxed">
               Our greatest achievement is the trust of our clients. 
               Here is what they have to say about their home-finding journey with us.
             </p>
-            <div className="hidden md:block">
-               <button className="btn-secondary text-sm">Read More Stories</button>
+            
+            <div className="flex flex-col gap-3 pt-4">
+               <a href="tel:+919876543210">
+                 <button className="btn-primary w-full md:w-auto text-sm">
+                   <Phone size={16} /> Speak to an Expert
+                 </button>
+               </a>
+               <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
+                 <button className="btn-secondary w-full md:w-auto text-sm">
+                   <MessageCircle size={16} /> Chat on WhatsApp
+                 </button>
+               </a>
             </div>
           </div>
 
@@ -55,21 +65,21 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 relative group hover:shadow-md transition-shadow"
+                className="bg-[#FFF9F2] p-8 rounded-2xl shadow-sm border border-[#EFEBE9] relative group hover:shadow-md transition-shadow"
               >
-                <Quote className="absolute top-8 right-8 w-8 h-8 text-neutral-100 group-hover:text-neutral-200 transition-colors" />
+                <Quote className="absolute top-8 right-8 w-8 h-8 text-[#D7CCC8] group-hover:text-[#BCAAA4] transition-colors" />
                 
-                <p className="text-neutral-600 leading-relaxed mb-6 relative z-10">
+                <p className="text-[#3E2723] leading-relaxed mb-6 relative z-10 italic">
                   "{item.text}"
                 </p>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center font-serif text-lg">
+                  <div className="w-10 h-10 rounded-full bg-[#5D4037] text-white flex items-center justify-center font-serif text-lg">
                     {item.initial}
                   </div>
                   <div>
-                    <h4 className="font-heading font-medium text-sm text-neutral-900">{item.author}</h4>
-                    <p className="text-xs text-neutral-400">{item.role}</p>
+                    <h4 className="font-heading font-medium text-sm text-[#3E2723]">{item.author}</h4>
+                    <p className="text-xs text-[#8D6E63]">{item.role}</p>
                   </div>
                 </div>
               </motion.div>
