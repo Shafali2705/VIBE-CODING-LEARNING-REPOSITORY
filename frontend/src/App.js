@@ -1,6 +1,9 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Features from './components/Features';
+import About from './components/About';
+import Footer from './components/Footer';
 import { Toaster } from './components/ui/sonner';
 
 function App() {
@@ -9,8 +12,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        {/* Placeholder for future sections */}
+        <Features />
+        <About />
       </main>
+      <Footer />
       <Toaster />
     </div>
   );
