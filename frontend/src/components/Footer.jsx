@@ -1,6 +1,18 @@
 import React from 'react';
 import { MessageCircle, Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
 
+// Inverse Logo Component for Dark Footer
+const LogoInverse = ({ className = "h-8" }) => (
+  <svg viewBox="0 0 200 60" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* House Icon with Heart - White House */}
+    <path d="M25 10L45 25V45C45 47.7614 42.7614 50 40 50H10C7.23858 50 5 47.7614 5 45V25L25 10Z" className="fill-white"/>
+    <path d="M25 38.5C28.5 38.5 31 36 31 33.5C31 31 28 29 25 27C22 29 19 31 19 33.5C19 36 21.5 38.5 25 38.5Z" className="fill-neutral-900"/>
+    
+    {/* Text */}
+    <text x="55" y="38" className="font-heading font-bold text-2xl fill-white tracking-tight">Prem Om</text>
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-white pt-20 pb-10">
@@ -10,8 +22,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-neutral-900 font-heading font-bold text-xl">P</div>
-              <span className="font-heading font-semibold text-2xl tracking-tight">Prem Om</span>
+              <LogoInverse className="h-10 w-auto" />
             </div>
             <p className="text-neutral-400 leading-relaxed text-sm">
               Your trusted partner for finding premium, safe rental homes in Pune's most desirable neighborhoods. We prioritize safety and comfort for women and families.

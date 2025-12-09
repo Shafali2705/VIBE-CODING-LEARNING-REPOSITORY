@@ -15,10 +15,11 @@ export default function Hero() {
     <section className="relative min-h-screen pt-20 flex flex-col justify-center overflow-hidden">
       {/* Background with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(255,249,242,0.8)] to-[#FFF9F2] z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(255,249,242,0.85)] to-[#FFF9F2] z-10"></div>
+        {/* Updated to Family Image */}
         <img 
-          src="https://images.pexels.com/photos/7045770/pexels-photo-7045770.jpeg" 
-          alt="Premium Living Room" 
+          src="https://images.unsplash.com/photo-1585945148306-db646373834d?q=80&w=2070&auto=format&fit=crop" 
+          alt="Happy Indian Family in Living Room" 
           className="w-full h-full object-cover object-center opacity-90"
         />
       </div>
