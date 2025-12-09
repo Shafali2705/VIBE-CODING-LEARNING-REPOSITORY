@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Key, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
+import BuyHomeModal from './BuyHomeModal';
 
 export default function Hero() {
   const scrollToRentals = () => {
@@ -67,11 +68,12 @@ export default function Hero() {
               Explore Rentals <Key size={20} />
             </button>
             
-            <a href="https://wa.me/910000000000?text=I'm%20interested%20in%20buying%20a%20home%20in%20Koregaon%20Park" target="_blank" rel="noopener noreferrer">
+            <BuyHomeModal>
               <button className="btn-secondary h-14 px-8 text-lg w-full sm:w-auto bg-white/60">
                 Buy Homes <Home size={20} className="ml-2" />
               </button>
-            </a>
+            </BuyHomeModal>
+
           </motion.div>
         </div>
       </div>
