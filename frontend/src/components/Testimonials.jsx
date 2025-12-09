@@ -43,12 +43,12 @@ export default function Testimonials() {
             </p>
             
             <div className="flex flex-col gap-3 pt-4">
-               <a href="tel:+919876543210">
+               <a href="tel:+919326071020">
                  <button className="btn-primary w-full md:w-auto text-sm">
                    <Phone size={16} /> Speak to an Expert
                  </button>
                </a>
-               <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
+               <a href="https://wa.me/919326071020" target="_blank" rel="noopener noreferrer">
                  <button className="btn-secondary w-full md:w-auto text-sm">
                    <MessageCircle size={16} /> Chat on WhatsApp
                  </button>

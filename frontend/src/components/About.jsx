@@ -21,12 +21,12 @@ export default function About() {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-6">
-               <a href="tel:+919876543210">
+               <a href="tel:+919326071020">
                  <button className="btn-primary text-sm px-6">
                    <Phone size={16} /> Call Now
                  </button>
                </a>
-               <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
+               <a href="https://wa.me/919326071020" target="_blank" rel="noopener noreferrer">
                  <button className="btn-secondary text-sm px-6">
                    <MessageCircle size={16} /> WhatsApp
                  </button>

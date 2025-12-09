@@ -31,12 +31,12 @@ export default function Navbar() {
           <span className="text-sm font-medium text-neutral-500 mr-2">
             Serving Koregaon Park & Surroundings
           </span>
-          <a href="tel:+910000000000" className="no-underline">
+          <a href="tel:+919326071020" className="no-underline">
             <button className="btn-secondary h-10 px-6 text-sm flex items-center gap-2">
               <Phone size={16} /> Call Now
             </button>
           </a>
-          <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer" className="no-underline">
+          <a href="https://wa.me/919326071020" target="_blank" rel="noopener noreferrer" className="no-underline">
             <button className="btn-primary h-10 px-6 text-sm flex items-center gap-2">
               <MessageCircle size={16} /> WhatsApp
             </button>
@@ -53,12 +53,12 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-[#FFF9F2]">
               <div className="flex flex-col gap-6 mt-10">
-                <a href="https://wa.me/910000000000" className="w-full">
+                <a href="https://wa.me/919326071020" className="w-full">
                   <button className="btn-primary w-full justify-center">
                     <MessageCircle size={18} /> WhatsApp Us
                   </button>
                 </a>
-                <a href="tel:+910000000000" className="w-full">
+                <a href="tel:+919326071020" className="w-full">
                   <button className="btn-secondary w-full justify-center">
                     <Phone size={18} /> Call Now
                   </button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Phone, Mail, Send, MessageCircle } from 'lucide-react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
@@ -33,8 +33,8 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-heading font-medium text-lg text-[#3E2723] mb-1">Call Us Directly</h4>
                   <p className="text-[#8D6E63] text-sm mb-2">Mon - Sat, 9am - 7pm</p>
-                  <a href="tel:+919876543210" className="text-xl font-semibold text-[#5D4037] hover:underline">
-                    +91 98765 43210
+                  <a href="tel:+919326071020" className="text-xl font-semibold text-[#5D4037] hover:underline">
+                    +91 93260 71020
                   </a>
                 </div>
               </div>
@@ -46,19 +46,9 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-heading font-medium text-lg text-[#3E2723] mb-1">Email Us</h4>
                   <p className="text-[#8D6E63] text-sm mb-2">We reply within 24 hours</p>
-                  <a href="mailto:hello@premom.com" className="text-xl font-semibold text-[#5D4037] hover:underline">
-                    hello@premom.com
+                  <a href="mailto:tripatnaz@gmail.com" className="text-xl font-semibold text-[#5D4037] hover:underline">
+                    tripatnaz@gmail.com
                   </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-[#EFEBE9]">
-                 <div className="w-12 h-12 rounded-full bg-[#EFEBE9] flex items-center justify-center text-[#5D4037] shrink-0">
-                  <MapPin size={24} />
-                </div>
-                 <div>
-                  <h4 className="font-heading font-medium text-lg text-[#3E2723] mb-1">Visit Our Office</h4>
-                   <p className="text-[#5D4037]">Office 404, Gera Imperium,<br/>Koregaon Park, Pune 411001</p>
                 </div>
               </div>
             </div>
@@ -118,7 +108,7 @@ export default function ContactSection() {
                 <div className="h-px bg-[#EFEBE9] flex-1"></div>
               </div>
 
-               <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
+               <a href="https://wa.me/919326071020" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" type="button" className="w-full h-12 border-[#5D4037] text-[#5D4037] hover:bg-[#FFF9F2] rounded-full">
                   <MessageCircle size={18} className="mr-2" /> Chat on WhatsApp
                 </Button>

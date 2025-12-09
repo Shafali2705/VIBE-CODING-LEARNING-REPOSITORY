@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { MessageCircle, Phone, Mail } from 'lucide-react';
 
 // Inverse Logo Component for Dark Footer
 const LogoInverse = ({ className = "h-8" }) => (
@@ -27,17 +27,6 @@ export default function Footer() {
             <p className="text-neutral-400 leading-relaxed text-sm">
               Your trusted partner for finding premium, safe rental homes in Pune's most desirable neighborhoods. We prioritize safety and comfort for women and families.
             </p>
-            <div className="flex gap-4 pt-2">
-              <a href="#" className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-white hover:text-neutral-900 transition-colors">
-                <Instagram size={16} />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-white hover:text-neutral-900 transition-colors">
-                <Facebook size={16} />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-white hover:text-neutral-900 transition-colors">
-                <Linkedin size={16} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -45,8 +34,6 @@ export default function Footer() {
             <h4 className="font-heading font-medium text-lg">Company</h4>
             <ul className="space-y-3 text-sm text-neutral-400">
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Our Team</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
             </ul>
@@ -58,9 +45,6 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-neutral-400">
               <li><a href="#" className="hover:text-white transition-colors">Koregaon Park</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Kalyani Nagar</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Viman Nagar</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Boat Club Road</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Magarpatta City</a></li>
             </ul>
           </div>
 
@@ -68,20 +52,16 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-heading font-medium text-lg">Get in Touch</h4>
             <div className="space-y-4">
-              <div className="flex items-start gap-3 text-sm text-neutral-400">
-                <MapPin size={18} className="mt-1 shrink-0 text-neutral-500" />
-                <span>Office 404, Gera Imperium,<br/>Koregaon Park, Pune 411001</span>
-              </div>
               <div className="flex items-center gap-3 text-sm text-neutral-400">
                 <Phone size={18} className="text-neutral-500" />
-                <span>+91 98765 43210</span>
+                <span>+91 93260 71020</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-neutral-400">
                 <Mail size={18} className="text-neutral-500" />
-                <span>hello@premom.com</span>
+                <span>tripatnaz@gmail.com</span>
               </div>
               
-              <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919326071020" target="_blank" rel="noopener noreferrer">
                 <button className="mt-4 w-full btn-primary bg-white text-neutral-900 hover:bg-neutral-200 border-none text-xs h-10">
                   <MessageCircle size={14} /> Chat on WhatsApp
                 </button>

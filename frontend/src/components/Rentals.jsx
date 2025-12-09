@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IndianRupee, BedDouble, User } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -91,7 +91,7 @@ export default function Rentals() {
                 ))}
               </div>
 
-              <a href={`https://wa.me/910000000000?text=I'm%20interested%20in%20${option.type}%20rentals`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/919326071020?text=I'm%20interested%20in%20${option.type}%20rentals`} target="_blank" rel="noopener noreferrer">
                 <button className="btn-secondary w-full text-sm py-2 bg-white">
                   Check Availability
                 </button>
@@ -120,7 +120,7 @@ export default function Rentals() {
               </p>
             </div>
           </div>
-          <a href="https://wa.me/910000000000?text=I'm%20looking%20for%20PG%20options%20for%20women" target="_blank" rel="noopener noreferrer" className="shrink-0">
+          <a href="https://wa.me/919326071020?text=I'm%20looking%20for%20PG%20options%20for%20women" target="_blank" rel="noopener noreferrer" className="shrink-0">
             <button className="bg-white text-neutral-900 px-6 py-2.5 rounded-full text-sm font-medium hover:bg-neutral-100 transition-colors">
               Enquire for PG
             </button>
