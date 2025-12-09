@@ -1,8 +1,15 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Heart, MapPin } from 'lucide-react';
+import { ArrowRight, Key, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
+  const scrollToRentals = () => {
+    const element = document.getElementById('rentals');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen pt-20 flex flex-col justify-center overflow-hidden">
       {/* Background with Gradient Overlay */}
@@ -53,45 +60,19 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
-            <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
-              <button className="btn-primary h-14 px-8 text-lg w-full sm:w-auto shadow-xl shadow-orange-100">
-                WhatsApp Us <ArrowRight size={20} />
-              </button>
-            </a>
-            <a href="tel:+910000000000">
+            <button 
+              onClick={scrollToRentals}
+              className="btn-primary h-14 px-8 text-lg w-full sm:w-auto shadow-xl shadow-orange-100"
+            >
+              Explore Rentals <Key size={20} />
+            </button>
+            
+            <a href="https://wa.me/910000000000?text=I'm%20interested%20in%20buying%20a%20home%20in%20Koregaon%20Park" target="_blank" rel="noopener noreferrer">
               <button className="btn-secondary h-14 px-8 text-lg w-full sm:w-auto bg-white/60">
-                Call Directly
+                Buy Homes <Home size={20} className="ml-2" />
               </button>
             </a>
           </motion.div>
-
-          {/* Trust Indicators */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="pt-12 flex flex-wrap justify-center gap-8 md:gap-16 text-neutral-500"
-          >
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
-                <ShieldCheck size={20} className="text-neutral-800" />
-              </div>
-              <span className="text-sm font-medium">Safe Localities</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
-                <Heart size={20} className="text-neutral-800" />
-              </div>
-              <span className="text-sm font-medium">Family Friendly</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
-                <MapPin size={20} className="text-neutral-800" />
-              </div>
-              <span className="text-sm font-medium">Prime Areas</span>
-            </div>
-          </motion.div>
-
         </div>
       </div>
     </section>
