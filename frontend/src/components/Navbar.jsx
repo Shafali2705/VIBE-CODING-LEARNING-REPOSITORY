@@ -3,27 +3,19 @@ import { Phone, MessageCircle, Menu } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
-// Custom Logo Component
-const Logo = ({ className = "h-8" }) => (
-  <svg viewBox="0 0 200 60" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* House Icon with Heart */}
-    <path d="M25 10L45 25V45C45 47.7614 42.7614 50 40 50H10C7.23858 50 5 47.7614 5 45V25L25 10Z" className="fill-neutral-900"/>
-    <path d="M25 38.5C28.5 38.5 31 36 31 33.5C31 31 28 29 25 27C22 29 19 31 19 33.5C19 36 21.5 38.5 25 38.5Z" className="fill-[#FFF9F2]"/>
-    
-    {/* Text */}
-    <text x="55" y="38" className="font-heading font-bold text-2xl fill-neutral-900 tracking-tight">Prem Om</text>
-  </svg>
-);
-
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300" 
+    <nav className="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-300" 
          style={{ background: 'var(--bg-overlay)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
       <div className="container h-full mx-auto px-4 flex items-center justify-between">
         
-        {/* Logo */}
+        {/* Logo Image */}
         <div className="flex items-center gap-2">
-          <Logo className="h-10 w-auto" />
+          <img 
+            src="https://customer-assets.emergentagent.com/job_prem-om-rentals/artifacts/4wh76rg9_Brand%20Image%20Prem%20Om.png" 
+            alt="Prem Om Properties" 
+            className="h-20 w-auto object-contain"
+          />
         </div>
 
         {/* Desktop Actions */}
