@@ -31,11 +31,7 @@ export default function Navbar() {
           <span className="text-sm font-medium text-neutral-500 mr-2">
             Serving Koregaon Park & Surroundings
           </span>
-          <a href="tel:+919326071020" className="no-underline">
-            <button className="btn-secondary h-10 px-6 text-sm flex items-center gap-2">
-              <Phone size={16} /> Call Now
-            </button>
-          </a>
+
           <a href="https://wa.me/919326071020" target="_blank" rel="noopener noreferrer" className="no-underline">
             <button className="btn-primary h-10 px-6 text-sm flex items-center gap-2">
               <MessageCircle size={16} /> WhatsApp

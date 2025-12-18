@@ -61,18 +61,20 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
-            <button 
+            <button
               onClick={() => scrollToSection('rentals')}
-              className="btn-primary h-14 px-8 text-lg w-full sm:w-auto shadow-xl shadow-orange-100"
+              className="btn-primary h-14 px-8 text-lg w-full sm:w-auto shadow-xl shadow-orange-100 inline-flex items-center justify-center gap-2"
             >
-              Explore Rentals <Key size={20} />
+              Explore Rentals
+              <Key size={20} />
             </button>
-            
-            <button 
+
+            <button
               onClick={() => scrollToSection('contact-section')}
-              className="btn-secondary h-14 px-8 text-lg w-full sm:w-auto bg-white/60"
+              className="btn-secondary h-14 px-8 text-lg w-full sm:w-auto bg-white/60 inline-flex items-center justify-center gap-2"
             >
-              Buy Homes <Home size={20} className="ml-2" />
+              Buy Homes
+              <Home size={20} />
             </button>
 
           </motion.div>
