@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    text: "Finding a safe place as a single working woman in Pune was stressing me out. Prem Om Properties didn't just find me a flat; they found me a society where I feel completely at home.",
+    text: "Staying in Koregaon Park in a prime and safe location has been the best experience for me and my family. What's unique about Prem Om Properties managed by Naval Mam, is that they prioritise tenants needs and work towards providing homes that are convenient and comfortable.",
     author: "Aditi Rao",
     role: "Software Engineer",
     initial: "A"
