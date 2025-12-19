@@ -4,10 +4,11 @@ import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 // Custom SVG Logo to replicate the brand image
+// Updated to match website typography (Outfit/Inter)
 const BrandLogo = ({ className = "h-16" }) => (
-  <svg viewBox="0 0 300 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 320 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Icon Group */}
-    <g transform="translate(110, 0) scale(0.6)">
+    <g transform="translate(0, 5) scale(0.55)">
        {/* House Shape */}
        <path 
          d="M10 50 L50 15 L90 50 V90 H10 V50 Z" 
@@ -36,11 +37,11 @@ const BrandLogo = ({ className = "h-16" }) => (
        <circle cx="50" cy="35" r="5" fill="currentColor" />
     </g>
 
-    {/* Text Group */}
-    <text x="150" y="80" textAnchor="middle" className="font-serif font-light text-3xl fill-current tracking-tight">
+    {/* Text Group - Aligned with House Icon */}
+    <text x="65" y="45" className="font-heading font-medium text-4xl fill-current tracking-tight">
       Prem<tspan fontWeight="bold">Om</tspan>Properties
     </text>
-    <text x="150" y="105" textAnchor="middle" className="font-sans font-light text-xs fill-current tracking-widest uppercase opacity-80">
+    <text x="65" y="70" className="font-sans font-light text-[10px] fill-current tracking-[0.2em] uppercase opacity-80">
       Secure Homes Crafted in Style
     </text>
   </svg>
@@ -54,8 +55,8 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="flex items-center">
-          <div className="text-[#8D6E63]"> {/* Logo Color */}
-            <BrandLogo className="h-20 w-auto" />
+          <div className="text-[#5D4037]"> {/* Brand Brown Color */}
+            <BrandLogo className="h-14 w-auto" />
           </div>
         </div>
 
