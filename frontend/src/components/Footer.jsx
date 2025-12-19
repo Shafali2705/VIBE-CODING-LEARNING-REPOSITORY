@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle, Phone, Mail } from 'lucide-react';
-import { BrandLogo } from './Navbar'; // Reuse the exact same component
+import { BrandLogo } from './Navbar'; 
 
 export default function Footer() {
   return (
@@ -11,11 +11,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-               {/* Logo in Footer - Using Brand Brown Color as requested (#5D4037) */}
-               {/* Added a small white glow/shadow just in case visibility is too low on black, 
-                   but keeping main fill brown as per instruction */}
+               {/* Logo in Footer - Brown color #5D4037 */}
                <div className="text-[#5D4037]"> 
-                 <BrandLogo className="h-20 w-auto" />
+                 <BrandLogo className="h-20 w-auto max-w-full" />
                </div>
             </div>
             <p className="text-neutral-400 leading-relaxed text-sm">

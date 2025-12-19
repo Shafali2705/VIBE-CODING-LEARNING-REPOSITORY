@@ -4,11 +4,11 @@ import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 // Consolidated BrandLogo Component
-// Increased viewBox width to prevent text cutting
+// Increased viewBox width to 500 to ensure text fits on one line without wrapping/cutting
 export const BrandLogo = ({ className = "h-16" }) => (
-  <svg viewBox="0 0 400 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Icon Group */}
-    <g transform="translate(0, 5) scale(0.55)">
+  <svg viewBox="0 0 500 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Icon Group - Scaled down slightly to fit better next to text */}
+    <g transform="translate(0, 10) scale(0.5)">
        {/* House Shape */}
        <path 
          d="M10 50 L50 15 L90 50 V90 H10 V50 Z" 
@@ -37,11 +37,12 @@ export const BrandLogo = ({ className = "h-16" }) => (
        <circle cx="50" cy="35" r="5" fill="currentColor" />
     </g>
 
-    {/* Text Group */}
-    <text x="65" y="45" className="font-heading font-medium text-4xl fill-current tracking-tight" style={{ fontFamily: 'Outfit, sans-serif' }}>
+    {/* Text Group - Aligned horizontally with icon */}
+    {/* x=60 puts it right next to the icon */}
+    <text x="60" y="55" className="font-heading font-medium text-4xl fill-current tracking-tight" style={{ fontFamily: 'Outfit, sans-serif' }}>
       Prem<tspan fontWeight="bold">Om</tspan>Properties
     </text>
-    <text x="65" y="70" className="font-sans font-light text-[10px] fill-current tracking-[0.2em] uppercase opacity-80" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <text x="60" y="80" className="font-sans font-light text-[10px] fill-current tracking-[0.2em] uppercase opacity-80" style={{ fontFamily: 'Inter, sans-serif' }}>
       Secure Homes Crafted in Style
     </text>
   </svg>
@@ -53,25 +54,26 @@ export default function Navbar() {
          style={{ background: 'var(--bg-overlay)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
       <div className="container h-full mx-auto px-4 flex items-center justify-between">
         
-        {/* Logo */}
-        <div className="flex items-center">
+        {/* Logo - Flex shrink 0 prevents it from being squished */}
+        <div className="flex items-center flex-shrink-0">
           <div className="text-[#5D4037]"> {/* Brand Brown Color */}
             <BrandLogo className="h-16 w-auto" />
           </div>
         </div>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
-          <span className="text-sm font-medium text-neutral-500 mr-2">
+        {/* Added whitespace-nowrap to text to prevent wrapping */}
+        <div className="hidden md:flex items-center gap-4 flex-shrink-0">
+          <span className="text-sm font-medium text-neutral-500 mr-2 whitespace-nowrap">
             Serving Koregaon Park & Surroundings
           </span>
           <a href="tel:+919326071020" className="no-underline">
-            <button className="btn-secondary h-10 px-6 text-sm flex items-center gap-2">
+            <button className="btn-secondary h-10 px-6 text-sm flex items-center gap-2 whitespace-nowrap">
               <Phone size={16} /> Call Now
             </button>
           </a>
           <a href="https://wa.me/919326071020" target="_blank" rel="noopener noreferrer" className="no-underline">
-            <button className="btn-primary h-10 px-6 text-sm flex items-center gap-2">
+            <button className="btn-primary h-10 px-6 text-sm flex items-center gap-2 whitespace-nowrap">
               <MessageCircle size={16} /> WhatsApp
             </button>
           </a>
