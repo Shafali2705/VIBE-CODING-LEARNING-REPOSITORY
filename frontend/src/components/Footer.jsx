@@ -1,6 +1,49 @@
 import React from 'react';
 import { MessageCircle, Phone, Mail } from 'lucide-react';
 
+// Custom SVG Logo to replicate the brand image (Inverse)
+const BrandLogoInverse = ({ className = "h-16" }) => (
+  <svg viewBox="0 0 300 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Icon Group */}
+    <g transform="translate(110, 0) scale(0.6)">
+       {/* House Shape */}
+       <path 
+         d="M10 50 L50 15 L90 50 V90 H10 V50 Z" 
+         stroke="currentColor" 
+         strokeWidth="8" 
+         strokeLinecap="round" 
+         strokeLinejoin="round"
+       />
+       {/* Chimney */}
+       <path 
+         d="M70 30 V20 H80 V40" 
+         stroke="currentColor" 
+         strokeWidth="8" 
+         strokeLinecap="round" 
+         strokeLinejoin="round"
+       />
+       {/* Door */}
+       <path 
+         d="M35 90 V55 H65 V90" 
+         stroke="currentColor" 
+         strokeWidth="6" 
+         strokeLinecap="round" 
+         strokeLinejoin="round"
+       />
+       {/* Circle Window */}
+       <circle cx="50" cy="35" r="5" fill="currentColor" />
+    </g>
+
+    {/* Text Group */}
+    <text x="150" y="80" textAnchor="middle" className="font-serif font-light text-3xl fill-current tracking-tight">
+      Prem<tspan fontWeight="bold">Om</tspan>Properties
+    </text>
+    <text x="150" y="105" textAnchor="middle" className="font-sans font-light text-xs fill-current tracking-widest uppercase opacity-80">
+      Secure Homes Crafted in Style
+    </text>
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-white pt-20 pb-10">
@@ -10,12 +53,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-               {/* Logo Image in Footer - Added bg-white/10 rounded to make it pop on dark background if needed, or just plain */}
-               <img 
-                src="https://customer-assets.emergentagent.com/job_prem-om-rentals/artifacts/4wh76rg9_Brand%20Image%20Prem%20Om.png" 
-                alt="Prem Om Properties" 
-                className="h-24 w-auto object-contain rounded-lg"
-              />
+               {/* Scalable SVG Logo */}
+               <div className="text-white opacity-90">
+                 <BrandLogoInverse className="h-24 w-auto" />
+               </div>
             </div>
             <p className="text-neutral-400 leading-relaxed text-sm">
               Your trusted partner for finding premium, safe rental homes in Pune's most desirable neighborhoods. We prioritize safety and comfort for women and families.

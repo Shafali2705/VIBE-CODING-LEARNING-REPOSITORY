@@ -3,19 +3,60 @@ import { Phone, MessageCircle, Menu } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
+// Custom SVG Logo to replicate the brand image
+const BrandLogo = ({ className = "h-16" }) => (
+  <svg viewBox="0 0 300 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Icon Group */}
+    <g transform="translate(110, 0) scale(0.6)">
+       {/* House Shape */}
+       <path 
+         d="M10 50 L50 15 L90 50 V90 H10 V50 Z" 
+         stroke="currentColor" 
+         strokeWidth="8" 
+         strokeLinecap="round" 
+         strokeLinejoin="round"
+       />
+       {/* Chimney */}
+       <path 
+         d="M70 30 V20 H80 V40" 
+         stroke="currentColor" 
+         strokeWidth="8" 
+         strokeLinecap="round" 
+         strokeLinejoin="round"
+       />
+       {/* Door */}
+       <path 
+         d="M35 90 V55 H65 V90" 
+         stroke="currentColor" 
+         strokeWidth="6" 
+         strokeLinecap="round" 
+         strokeLinejoin="round"
+       />
+       {/* Circle Window */}
+       <circle cx="50" cy="35" r="5" fill="currentColor" />
+    </g>
+
+    {/* Text Group */}
+    <text x="150" y="80" textAnchor="middle" className="font-serif font-light text-3xl fill-current tracking-tight">
+      Prem<tspan fontWeight="bold">Om</tspan>Properties
+    </text>
+    <text x="150" y="105" textAnchor="middle" className="font-sans font-light text-xs fill-current tracking-widest uppercase opacity-80">
+      Secure Homes Crafted in Style
+    </text>
+  </svg>
+);
+
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-24 transition-all duration-300" 
          style={{ background: 'var(--bg-overlay)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
       <div className="container h-full mx-auto px-4 flex items-center justify-between">
         
-        {/* Logo Image */}
-        <div className="flex items-center gap-2">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_prem-om-rentals/artifacts/4wh76rg9_Brand%20Image%20Prem%20Om.png" 
-            alt="Prem Om Properties" 
-            className="h-20 w-auto object-contain"
-          />
+        {/* Logo */}
+        <div className="flex items-center">
+          <div className="text-[#8D6E63]"> {/* Logo Color */}
+            <BrandLogo className="h-20 w-auto" />
+          </div>
         </div>
 
         {/* Desktop Actions */}
