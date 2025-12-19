@@ -3,10 +3,10 @@ import { Phone, MessageCircle, Menu } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
-// Custom SVG Logo to replicate the brand image
-// Updated to match website typography (Outfit/Inter)
-const BrandLogo = ({ className = "h-16" }) => (
-  <svg viewBox="0 0 320 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+// Consolidated BrandLogo Component
+// Increased viewBox width to prevent text cutting
+export const BrandLogo = ({ className = "h-16" }) => (
+  <svg viewBox="0 0 400 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* Icon Group */}
     <g transform="translate(0, 5) scale(0.55)">
        {/* House Shape */}
@@ -37,11 +37,11 @@ const BrandLogo = ({ className = "h-16" }) => (
        <circle cx="50" cy="35" r="5" fill="currentColor" />
     </g>
 
-    {/* Text Group - Aligned with House Icon */}
-    <text x="65" y="45" className="font-heading font-medium text-4xl fill-current tracking-tight">
+    {/* Text Group */}
+    <text x="65" y="45" className="font-heading font-medium text-4xl fill-current tracking-tight" style={{ fontFamily: 'Outfit, sans-serif' }}>
       Prem<tspan fontWeight="bold">Om</tspan>Properties
     </text>
-    <text x="65" y="70" className="font-sans font-light text-[10px] fill-current tracking-[0.2em] uppercase opacity-80">
+    <text x="65" y="70" className="font-sans font-light text-[10px] fill-current tracking-[0.2em] uppercase opacity-80" style={{ fontFamily: 'Inter, sans-serif' }}>
       Secure Homes Crafted in Style
     </text>
   </svg>
@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center">
           <div className="text-[#5D4037]"> {/* Brand Brown Color */}
-            <BrandLogo className="h-14 w-auto" />
+            <BrandLogo className="h-16 w-auto" />
           </div>
         </div>
 

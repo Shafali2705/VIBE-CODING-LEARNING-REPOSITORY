@@ -1,48 +1,6 @@
 import React from 'react';
 import { MessageCircle, Phone, Mail } from 'lucide-react';
-
-// Inverse Logo - Consistent with Website Typography
-const BrandLogoInverse = ({ className = "h-16" }) => (
-  <svg viewBox="0 0 320 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Icon Group */}
-    <g transform="translate(0, 5) scale(0.55)">
-       {/* House Shape */}
-       <path 
-         d="M10 50 L50 15 L90 50 V90 H10 V50 Z" 
-         stroke="currentColor" 
-         strokeWidth="8" 
-         strokeLinecap="round" 
-         strokeLinejoin="round"
-       />
-       {/* Chimney */}
-       <path 
-         d="M70 30 V20 H80 V40" 
-         stroke="currentColor" 
-         strokeWidth="8" 
-         strokeLinecap="round" 
-         strokeLinejoin="round"
-       />
-       {/* Door */}
-       <path 
-         d="M35 90 V55 H65 V90" 
-         stroke="currentColor" 
-         strokeWidth="6" 
-         strokeLinecap="round" 
-         strokeLinejoin="round"
-       />
-       {/* Circle Window */}
-       <circle cx="50" cy="35" r="5" fill="currentColor" />
-    </g>
-
-    {/* Text Group */}
-    <text x="65" y="45" className="font-heading font-medium text-4xl fill-current tracking-tight">
-      Prem<tspan fontWeight="bold">Om</tspan>Properties
-    </text>
-    <text x="65" y="70" className="font-sans font-light text-[10px] fill-current tracking-[0.2em] uppercase opacity-80">
-      Secure Homes Crafted in Style
-    </text>
-  </svg>
-);
+import { BrandLogo } from './Navbar'; // Reuse the exact same component
 
 export default function Footer() {
   return (
@@ -53,9 +11,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-               {/* Scalable SVG Logo */}
-               <div className="text-white opacity-90">
-                 <BrandLogoInverse className="h-16 w-auto" />
+               {/* Logo in Footer - Using Brand Brown Color as requested (#5D4037) */}
+               {/* Added a small white glow/shadow just in case visibility is too low on black, 
+                   but keeping main fill brown as per instruction */}
+               <div className="text-[#5D4037]"> 
+                 <BrandLogo className="h-20 w-auto" />
                </div>
             </div>
             <p className="text-neutral-400 leading-relaxed text-sm">
